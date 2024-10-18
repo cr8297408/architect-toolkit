@@ -15,10 +15,10 @@ Instrucciones paso a paso sobre cómo instalar y configurar el proyecto en un en
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/tu-usuario/tu-repo.git
+git clone https://github.com/cr8297408/architect-toolkit
 
 # Navegar al directorio del proyecto
-cd tu-repo
+cd architect-toolkit
 
 # Instalar dependencias
 npm install
