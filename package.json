@@ -1,7 +1,7 @@
 {
-  "name": "architect-toolkit",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@codismart/architect-toolkit",
+  "version": "0.0.1",
+  "main": "build/cjs/index.js",
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm",
     "build:esm": "tsc -p tsconfig.json --module esnext --outDir build/esm",
