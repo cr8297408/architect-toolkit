@@ -1,0 +1,47 @@
+{
+  "env": {
+    "browser": false,
+    "es2022": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module",
+    "ecmaVersion": "latest"
+  },
+  "plugins": ["@typescript-eslint", "jest"],
+  "extends": [
+    // "eslint:recommended" # 🪲 BUG
+    "standard-with-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jest/recommended",
+    "prettier"
+  ],
+  "rules": {
+    // The following rule is enabled only to supplement the inline suppression
+    // examples, and because it is not a recommended rule, you should either
+    // disable it, or understand what it enforces.
+    // https://typescript-eslint.io/rules/explicit-function-return-type/
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "@typescript-eslint/array-type": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/no-extraneous-class": "warn",
+    "@typescript-eslint/restrict-template-expressions": "warn",
+    "@typescript-eslint/no-throw-literal": "warn",
+    "@typescript-eslint/no-base-to-string": "warn",
+    "@typescript-eslint/naming-convention": "warn",
+    "@typescript-eslint/strict-boolean-expressions": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "import/order": [
+      "error",
+      {
+        "groups": [["builtin", "external"], "internal", ["parent", "sibling", "index"]],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  }
+}

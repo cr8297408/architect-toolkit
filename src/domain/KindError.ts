@@ -1,0 +1,30 @@
+export enum KindError {
+  CLIENT = 'client', // Errores provocados por el cliente
+  SYSTEM = 'system', // Errores internos del sistema
+  VALIDATION = 'validation', // Errores de validación de datos
+  UNKNOW = 'unknown', // Errores desconocidos
+  NOINFO = 'no-info', // Falta de información
+  AUTHENTICATION = 'authentication', // Fallo de autenticación
+  AUTHORIZATION = 'authorization', // Fallo de autorización
+  TIMEOUT = 'timeout', // Errores por tiempo de espera agotado
+  NETWORK = 'network', // Errores relacionados con la red
+  DATABASE = 'database', // Errores de la base de datos
+  CONFLICT = 'conflict', // Conflictos de estado o recursos
+  NOT_FOUND = 'not-found', // Recurso no encontrado
+  TOO_MANY_REQUESTS = 'too-many-requests', // Exceso de peticiones (ratelimit)
+  BAD_REQUEST = 'bad-request', // Solicitud incorrecta o mal formada
+  DEPENDENCY_FAILURE = 'dependency-failure', // Fallo en servicios externos
+  SERVER = 'server', // Errores generales del servidor
+  SECURITY = 'security', // Errores relacionados con seguridad
+  PARSE = 'parse', // Error de análisis de datos
+  RESOURCE_EXHAUSTED = 'resource-exhausted', // Recursos agotados (memoria, etc.)
+  UNAVAILABLE = 'unavailable', // Servicio no disponible
+  DEPRECATED = 'deprecated', // Uso de características obsoletas
+  CONFIGURATION = 'configuration', // Error en la configuración del sistema
+  FILESYSTEM = 'filesystem', // Problemas con el sistema de archivos
+  API_LIMIT = 'api-limit', // Límite de API excedido
+  SERVICE_DOWN = 'service-down', // Servicios externos no accesibles
+  PERMISSION_DENIED = 'permission-denied', // Permisos denegados
+  NOT_IMPLEMENTED = 'not-implemented', // Funcionalidad no implementada
+  FORMAT = 'format', // Error en el formato de datos
+}
