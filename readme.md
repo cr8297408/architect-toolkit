@@ -22,7 +22,13 @@ Este repositorio está diseñado para facilitar el uso de diferentes patrones de
 
 ## Instalación
 
-Sigue estos pasos para instalar y configurar el proyecto en tu entorno local:
+Puedes instalar el paquete desde npm:
+
+```bash
+  npm i @codismart/architect-toolkit
+```
+
+O sigue estos pasos para instalar y configurar el proyecto en tu entorno local:
 
 ```bash
 # Clonar el repositorio
