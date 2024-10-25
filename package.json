@@ -1,6 +1,6 @@
 {
   "name": "@codismart/architect-toolkit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "build/cjs/index.js",
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm",
@@ -15,6 +15,7 @@
   "keywords": [],
   "author": "Cesar Augusto Ruiz Puentes",
   "license": "ISC",
+  "homepage": "https://github.com/cr8297408/architect-toolkit",
   "description": "",
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
