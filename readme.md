@@ -2,6 +2,17 @@
 
 Este repositorio está diseñado para facilitar el uso de diferentes patrones de diseño en proyectos de desarrollo de software, proporcionando una estructura modular y organizada para implementar soluciones escalables y reutilizables. Dentro del repositorio, se incluyen implementaciones de patrones como el Builder, State, Repository, y Specification, además de una amplia gama de errores personalizados que permiten manejar situaciones específicas de la aplicación.
 
+## Contenidos
+
+- [Características](#características)
+- [Instalación](#instalación)
+- [Uso](#uso)
+  - [Builder Pattern](#builder-pattern)
+  - [Step Pattern](#step-pattern)
+  - [State Pattern](#state-pattern)
+  - [Repository Pattern](#repository-pattern)
+  - [Command Pattern](#command-pattern)
+
 ## Características
 
 - Implementaciones de patrones de diseño como Builder, State, Repository, Specification.
