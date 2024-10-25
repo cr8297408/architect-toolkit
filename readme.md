@@ -62,31 +62,10 @@ export class ExampleBuilder extends GeneralCassandraQueryBuilder<IExample> {
 
 const builder = new ExampleBuilder({ keyspace: 'example_keyspace' });
 builder.whereConditionUuid('123e4567-e89b-12d3-a456-426614174000');
-const { query, parameters } = builder.buildUpdateQuery();
-console.log(query, parameters);
+builder.set('name', 'John');
+const resultBuild = builder.buildUpdateQuery();
+console.log(resultBuild); // { query: UPDATE example_keyspace.example SET name = ? WHERE uuid = ?, parameters: ['John', '123e4567-e89b-12d3-a456-426614174000'] }
 
-```
-
-Ejemplo de uso del Builder Pattern para construir consultas en MongoDB:
-
-```typescript
-import { GeneralMongoQueryBuilder } from '@codismart/architect-toolkit'; 
-
-class ConfigurationUpdateBuilder extends GeneralMongoQueryBuilder<Configuration> {
-  constructor(options: IGeneralMongoQueryBuilderOptions) {
-    super(options);
-  }
-
-  whereConditionUuid(uuid: string): this {
-    this.where('conditionUuid', MongoOperator.EQUALS, uuid);
-    return this;
-  }
-}
-
-const builder = new ConfigurationUpdateBuilder({ collectionName: 'configurations' });
-builder.whereConditionUuid('123e4567-e89b-12d3-a456-426614174000');
-const { query, parameters } = builder.buildUpdateQuery();
-console.log(query, parameters);
 ```
 
 Ejemplo de uso del Builder Pattern para construir consultas en SQL:
@@ -105,8 +84,9 @@ class ConfigurationUpdateBuilder extends GeneralSQLQueryBuilder<Configuration> {
 
 const builder = new ConfigurationUpdateBuilder({ tableName: 'configurations' });
 builder.whereConditionUuid('123e4567-e89b-12d3-a456-426614174000');
-const { query, parameters } = builder.buildUpdateQuery();
-console.log(query, parameters);
+builder.set('name', 'John');
+const resultBuild = builder.buildUpdateQuery();
+console.log(resultBuild); // { query: UPDATE configurations SET name = ? WHERE conditionUuid = ?, parameters: ['John', '123e4567-e89b-12d3-a456-426614174000'] }
 ```
 
 ## Step Pattern
@@ -126,8 +106,9 @@ class ExampleStep extends Step {
 
 class ExampleStep2 extends Step {
   name = 'ExampleStep2';
-  async exec(state: State): Promise<void> {
+  async exec(state: ExampleState): Promise<void> {
     // TODO: Implement your logic of second step here
+    console.log(state.uuid);
   }
 }
 
