@@ -1,4 +1,4 @@
-import { State } from '..';
+import { type State } from '..';
 
 export interface IStep {
   name: string;

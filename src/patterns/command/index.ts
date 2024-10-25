@@ -1,2 +1,3 @@
 export * from './CommandSqlOrCassandraManager';
-export * from './ICommand';
+export * from './ICommandModels';
+export * from './GeneralCommandManager';

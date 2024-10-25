@@ -44,7 +44,7 @@ export class MongoCondition {
   }
 }
 
-export class MongoQueryBuilder<T> {
+export class GeneralMongoQueryBuilder<T> {
   private conditions: MongoCondition[] = [];
   private projectionFields: string[] = [];
   private sortOptions: Record<string, 1 | -1> = {};

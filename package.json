@@ -1,6 +1,6 @@
 {
   "name": "@codismart/architect-toolkit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "build/cjs/index.js",
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm",
@@ -13,7 +13,7 @@
     "flb": "npm run prettier:fix && npm run lint:fix && npm run build"
   },
   "keywords": [],
-  "author": "",
+  "author": "Cesar Augusto Ruiz Puentes",
   "license": "ISC",
   "description": "",
   "devDependencies": {

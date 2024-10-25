@@ -1,4 +1,4 @@
-import { SqlSpecification } from '../specification';
+import { type SqlSpecification } from '../specification';
 
 export class BaseRepository {
   /**

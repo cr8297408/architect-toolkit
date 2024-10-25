@@ -1,5 +1,5 @@
-import { Domain, Response } from '../../domain';
-import { IStep } from '../step';
+import { type Domain, type Response } from '../../domain';
+import { type IStep } from '../step';
 
 export interface IState {
   accept: (step: IStep) => Promise<void>;

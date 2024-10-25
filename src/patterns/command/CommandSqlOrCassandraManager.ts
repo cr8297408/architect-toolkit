@@ -1,6 +1,6 @@
-import { type ICommand } from './ICommand';
+import { type ICommandManager, type ICommand } from './ICommandModels';
 
-export class CommandSqlOrCassandraManager {
+export class CommandSqlOrCassandraManager implements ICommandManager {
   private commands: ICommand[] = [];
   private command: ICommand;
   private readonly executor: IExecutorSql;

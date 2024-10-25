@@ -8,3 +8,9 @@ export interface ICommand {
     params: Array<string | number | undefined | boolean>;
   }>;
 }
+
+export interface ICommandManager {
+  addCommand: (command: ICommand) => void;
+  executeCommands: () => Promise<void>;
+  executeSingleCommand: () => Promise<void>;
+}
